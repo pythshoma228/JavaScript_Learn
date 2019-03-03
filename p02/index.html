@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="index_style.css">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body style="background-color: #1deab7;">
+    <!-- TOP PANEL 
+    <header>
+        <div id="top_panel">
+            <h1 id="logo">S</h1>
+    </div>
+            <a id="main_site" href="https://www.google.com">Главная</a>
+            <a id="faq" href="https://www.google.com">FAQ</a>
+        </div>
+    </header>
+    <!--  MAIN TEXT  -->
+    <div id="root"></div>
+    <div class="main_text">
+        <h2>Цитата</h2>
+        <p>Знание — настолько ценная вещь, что его не зазорно добывать из любого источника.
+        (c) Фома Аквинский </p>
+    <div id="cube"></div>
+    <script type="text/javascript">
+        window.onload = init();
+        
+        function init(){
+
+        var cube = document.getElementById('cube');
+        cube.onclick = ShowAnswer;
+}
+        function ShowAnswer(eventObj) {
+        var cube = document.getElementById('cube');
+        var cube = eventObj.target;
+
+        cube.setAttribute("class", "cube2");
+        setTimeout("cube.removeAttribute('class')", 2000);
+    
+    }
+    </script>
+    <script type="text/babel" src="index_react.js"></script>
+</body>
+</html>

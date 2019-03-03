@@ -11,8 +11,8 @@ class Component extends React.Component {
     setTimeout(() => {
   this.setState({
     name: "Andrey"
-  });
-}, 10000);
+    });
+    }, 10000);
 }
 
 
