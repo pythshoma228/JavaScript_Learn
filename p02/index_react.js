@@ -1,24 +1,16 @@
-class Component extends React.Component{
-    constructor(props){
+class Animal extends React.Component {
+    constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-        this.state = {counter: 0};
-}
-
-    handleClick(){
-        this.setState({counter: ++this.state.counter});
-        //alert("hello world");
+        this.state = {a: 0};
     }
 
-    render(){
-
-        return (
-            <div>
-                <button onClick={this.handleClick}>Clicked {this.state.counter}</button>
-            </div>
-        );
+    render() {
+        return(
+            <div>Hello world</div>
+            );
     }
 }
+
 ReactDOM.render(
-	<Component />,
-	document.getElementById('root'));
+    <Component />,
+    document.getElementById('root'));

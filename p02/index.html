@@ -1,16 +1,129 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
     <title>Web</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="index_style.css">
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-</head>
+    </head>
 <body style="background-color: #1deab7;">
+    <style type="text/css">
+        /*body{
+    background: url(images.jpg) no-repeat fixed;
+    background-size: cover;
+}*/
+/* TOP PANEL */
+
+#top_panel{
+    position: fixed;
+    left:30px;
+    top: 3px;
+    width: 1300px;
+    height: 50px;
+    background-color: #90ad41;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#logo{
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial;
+}
+#main_site{
+    position: absolute;
+    top: 15px;
+    left: 170px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    background-color:  #657539;
+}
+a{
+    font-family: Arial;
+}
+a:link{
+    text-decoration: none;
+    color: #cccfc5;
+}
+a:visited{
+    color: #cccfc5;
+}
+a:hover{
+    color: red;
+}
+#faq{
+    position: absolute;
+    top: 15px;
+    left: 300px;
+    width: 100px;
+    height: 25px;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    background-color:  #657539;
+}
+/* MAIN TEXT */
+.main_text{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+p{
+    font-family: Arial;
+}
+h2{
+    font-family: Arial;
+}
+
+#cube{
+    position: relative;
+    left: 100px;
+    top: 50px;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+.cube2{
+     position: relative;
+    left: 100px;
+    top: 50px;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anim{
+    0%{
+    }
+    30%{
+    }
+    50%{
+        transform: scale(2, 2);
+    }
+    100%{
+        transform: scale(1, 1);
+    }
+}
+.butt{
+    position: relative;
+    top: 100px;
+    left: 600px;
+}
+    </style>
     <!-- TOP PANEL 
     <header>
         <div id="top_panel">
@@ -23,9 +136,9 @@
     <!--  MAIN TEXT  -->
     <div id="root"></div>
     <div class="main_text">
-        <h2>Цитата</h2>
-        <p>Знание — настолько ценная вещь, что его не зазорно добывать из любого источника.
-        (c) Фома Аквинский </p>
+        <!--<h2>Цитата</h2>
+        <p>Знание — настолько ценная вещь, что его не зазорно добывать из любого источника. 
+        (c) Фома Аквинский </p> -->
     <div id="cube"></div>
     <script type="text/javascript">
         window.onload = init();
@@ -33,9 +146,8 @@
         function init(){
 
         var cube = document.getElementById('cube');
-        cube.onclick = ShowAnswer;
-}
-        function ShowAnswer(eventObj) {
+
+        cube.onclick = function(eventObj) {
         var cube = document.getElementById('cube');
         var cube = eventObj.target;
 
@@ -43,56 +155,8 @@
         setTimeout("cube.removeAttribute('class')", 2000);
     
     }
-    </script>
-    <script type="text/babel" src="index_react.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Web</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="index_style.css">
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-</head>
-<body style="background-color: #1deab7;">
-    <!-- TOP PANEL 
-    <header>
-        <div id="top_panel">
-            <h1 id="logo">S</h1>
-    </div>
-            <a id="main_site" href="https://www.google.com">Главная</a>
-            <a id="faq" href="https://www.google.com">FAQ</a>
-        </div>
-    </header>
-    <!--  MAIN TEXT  -->
-    <div id="root"></div>
-    <div class="main_text">
-        <h2>Цитата</h2>
-        <p>Знание — настолько ценная вещь, что его не зазорно добывать из любого источника.
-        (c) Фома Аквинский </p>
-    <div id="cube"></div>
-    <script type="text/javascript">
-        window.onload = init();
-        
-        function init(){
-
-        var cube = document.getElementById('cube');
-        cube.onclick = ShowAnswer;
 }
-        function ShowAnswer(eventObj) {
-        var cube = document.getElementById('cube');
-        var cube = eventObj.target;
-
-        cube.setAttribute("class", "cube2");
-        setTimeout("cube.removeAttribute('class')", 2000);
-    
-    }
     </script>
     <script type="text/babel" src="index_react.js"></script>
 </body>
->>>>>>> bec95967d3af91dcb5524a944d67e8bd82811c59
 </html>
