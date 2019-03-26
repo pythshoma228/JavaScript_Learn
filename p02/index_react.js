@@ -12,5 +12,5 @@ class Animal extends React.Component {
 }
 
 ReactDOM.render(
-    <Component />,
+    <Animal />,
     document.getElementById('root'));
