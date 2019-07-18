@@ -14,7 +14,7 @@ class App extends Component {
         </div>
 
         <div>
-        	<pre>You very bad</pre>
+        	<pre>You're very bad</pre>
         </div>
     );
   }
